@@ -1,0 +1,25 @@
+flowchart TD
+
+A[Start] --> B[Power ON ESP32<br>Initialize Sensors & LCD]
+
+B --> C[Read Temperature Sensor]
+C --> D[Read Current Sensor]
+D --> E[Check Load Status (ON/OFF)]
+
+E --> F{Overload or<br>Overheating?}
+
+F -- Yes --> G[Trigger Auto Cut-Off]
+G --> H[Display Alert on LCD]
+H --> I[Log Fault Event]
+I --> J[Stop]
+
+F -- No --> K[Update Working Time Counter]
+K --> L[Display Runtime, Current & Temperature on LCD]
+L --> M{User Turns OFF Load?}
+
+M -- Yes --> N[Stop Timer<br>Save Runtime Log]
+N --> J[Stop]
+
+M -- No --> C[Continue Monitoring]
+
+J --> O[End]
