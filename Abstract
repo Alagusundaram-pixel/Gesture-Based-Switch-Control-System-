@@ -1,0 +1,10 @@
+This project introduces a Smart Energy-Efficient Load Monitoring and Control System built using the ESP32 microcontroller. The system is designed to reduce unwanted power consumption and improve electrical safety in home, educational, and industrial environments.
+The ESP32 automatically logs the ON/OFF working duration of connected loads through a built-in Working-Time Tracker. This runtime information is displayed on an LCD screen, helping users monitor energy usage without requiring a mobile app or PC.
+For safety, the system integrates a temperature sensor and current sensor to continuously analyze load performance. If overload or overheating is detected, the ESP32 triggers an auto cut-off and alerts the user, helping prevent equipment damage and electrical hazards.
+The system is built using low-cost components and supports future expansion such as IoT connectivity, cloud analytics, mobile notifications, and smart automation.
+🔑 Key Features
+Automatic Energy Saving (auto-off for idle/unsafe loads)
+Load Runtime Tracking (ESP32-based logging)
+Safety Protection (overload & overheating auto-cutoff)
+Real-time Display (current, temperature, runtime)
+Low-Cost, Reliable, Expandable Smart Energy System
